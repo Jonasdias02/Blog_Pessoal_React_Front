@@ -4,6 +4,8 @@ import 'remixicon/fonts/remixicon.css'
 
 import { AuthContext } from "../../contexts/AuthContext";
 
+import img_1 from '../../assets/1.png'
+
 function Navbar() {
   const navigate = useNavigate();
   const { handleLogout } = useContext(AuthContext);
@@ -16,12 +18,16 @@ function Navbar() {
   return (
     <>
       <div
-        className="w-full bg-orange-500 text-white
+        className="w-full bg-white text-orange-500
                 flex justify-center py-4"
       >
         <div className="container flex justify-between text-lg">
-          <Link to="/home" className="text-2xl font-bold">
-          <i className="ri-hospital-line"></i>
+          <Link to="/home" >
+          <img
+            src={img_1}
+            alt="Logo Página Home"
+            className=" w-1/3 font-bold"
+          />
           </Link>
 
           <div className="flex gap-4">
